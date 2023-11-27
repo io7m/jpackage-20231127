@@ -1,0 +1,8 @@
+*.tar.gz
+jars
+jdk
+jre
+maven
+target
+jpackagetest
+

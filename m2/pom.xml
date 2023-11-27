@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.io7m.demo</groupId>
+    <artifactId>jlinktest</artifactId>
+    <version>20231111</version>
+  </parent>
+
+  <artifactId>m2</artifactId>
+  <version>20231111</version>
+  <packaging>jar</packaging>
+
+  <description>m2</description>
+  <name>m2</name>
+  <url>https://www.github.com/io7m/jlinktest-20231111</url>
+
+</project>
