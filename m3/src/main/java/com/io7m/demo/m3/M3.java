@@ -36,8 +36,8 @@ public final class M3
     final String[] args)
     throws Exception
   {
-    System.out.println(new M1());
-    System.out.println(new M2());
+    new M1().show();
+    new M2().show();
 
     final var fs =
       FileSystems.getFileSystem(URI.create("jrt:/"));
@@ -47,8 +47,11 @@ public final class M3
     try (var stream = Files.list(modules)) {
       final var list = stream.toList();
       for (final var file : list) {
-        System.out.println(file);
+        System.out.println("JRT: " + file.getFileName());
       }
     }
+
+    System.out.println("Waiting for input...");
+    System.in.read();
   }
 }

@@ -23,4 +23,9 @@ public final class M2
   {
 
   }
+
+  public void show()
+  {
+    System.out.println("M2: Module " + M2.class.getModule());
+  }
 }
