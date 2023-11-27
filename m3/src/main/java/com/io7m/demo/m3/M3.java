@@ -20,6 +20,11 @@ package com.io7m.demo.m3;
 import com.io7m.demo.m1.M1;
 import com.io7m.demo.m2.M2;
 
+import java.net.URI;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+
 public final class M3
 {
   private M3()
@@ -29,8 +34,21 @@ public final class M3
 
   public static void main(
     final String[] args)
+    throws Exception
   {
     System.out.println(new M1());
     System.out.println(new M2());
+
+    final var fs =
+      FileSystems.getFileSystem(URI.create("jrt:/"));
+    final var modules =
+      fs.getPath("modules");
+
+    try (var stream = Files.list(modules)) {
+      final var list = stream.toList();
+      for (final var file : list) {
+        System.out.println(file);
+      }
+    }
   }
 }
